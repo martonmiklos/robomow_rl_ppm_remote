@@ -10,6 +10,7 @@ Quick and dirty Arduino code to being able to control your Robomow RL series mow
 
  * PPM compatible RC transmitter an receiver (tested with a DJI Phantom MK1 remote an receiver)
  * Arduino Pro micro (however the code shall be portable)
+ * Inverter to the Arduino TX line
  
 # Connection info
 
