@@ -6,7 +6,7 @@ Quick and dirty Arduino code to being able to control your Robomow RL series mow
 
 *= Tested with Robomow City 120 however likely to work with RL-1000, RL-2000 RL-550, RL-850, etc.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UquXWUTpAvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/embed/UquXWUTpAvM
 
 # Necessary equipment
 
