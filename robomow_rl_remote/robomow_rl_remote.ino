@@ -138,34 +138,34 @@ void calculateButtonsState()
       DBG("Turning mow on press C");
       lastMowOn = true;
       mowState = Mow_C_Pressing;
-      terminalButtonsState |= C;
+      terminalButtonsState = C;
       mowStateCounter = MOW_C_PRESS_TIME;
     } else {
       switch (mowState) {
       case Mow_C_Pressing:
-        terminalButtonsState |= C;
+        terminalButtonsState = C;
         mowStateCounter--;
         if (mowStateCounter == 0) {
-          DBG("Press factory");
+          DBG("Pressing factory");
           mowStateCounter = MOW_C_RELEASE_TIME;
           mowState = Mow_FactoryPressing;
         }
         break;
       case Mow_FactoryPressing:
-        terminalButtonsState |= (C | Factory);
+        terminalButtonsState = (C | Factory);
         mowStateCounter--;
         if (mowStateCounter == 0) {
-          DBG("Released C");
+          DBG("Releasing C");
           mowState = Mow_C_Released;
         }
         break;
       case Mow_C_Released:
         terminalButtonsState |= Factory;
-        DBG("Mowing");
+        DBG("Mow ON");
         break;
       case Mow_Idle:
         // factory, c flags are cleared upwards already
-        DBG("Mow off");
+        DBG("Mow OFF");
         break;
       }
     }
