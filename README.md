@@ -18,6 +18,6 @@ Quick and dirty Arduino code to being able to control your Robomow RL series mow
 
  * Hook your PPM receiever's output to the Arduino's pin 3
  * Remove the terminal from the mower
- * Connect your Serial1 port TX pin to the RX pin of mower's terminal RJ11 (pin 4)
+ * Connect your Serial1 port TX pin to the RX pin of mower's terminal RJ11 (pin 5)
  * Power your Arduino and the mower
  * Profit!
