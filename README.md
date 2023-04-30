@@ -13,6 +13,7 @@ Quick and dirty Arduino code to being able to control your Robomow RL series mow
  * PPM compatible RC transmitter an receiver (tested with a DJI Phantom MK1 remote an receiver)
  * Arduino Pro micro (the code shall be portable to other Arduinos)
  * Inverter to the Arduino TX line
+ * [PPM-reader library from Nikkilae](https://github.com/Nikkilae/PPM-reader)
  
 # Connection info - [see schematic in cad folder](https://raw.githubusercontent.com/martonmiklos/robomow_rl_ppm_remote/master/cad/pro_micro_adapter_schematic.pdf)
 

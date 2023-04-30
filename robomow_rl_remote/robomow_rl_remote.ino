@@ -19,7 +19,7 @@ PPMReader ppm(interruptPin, channelAmount);
 #define FORWARD_THRESHOLD 1600
 #define BACKWARD_THRESHOLD 1440
 
-//#define USB_DBG
+#define USB_DBG
 
 #ifdef USB_DBG
 #define DBG(str) Serial.write(str); Serial.println();
@@ -138,12 +138,12 @@ void calculateButtonsState()
       DBG("Turning mow on press C");
       lastMowOn = true;
       mowState = Mow_C_Pressing;
-      terminalButtonsState = C;
+      terminalButtonsState |= C;
       mowStateCounter = MOW_C_PRESS_TIME;
     } else {
       switch (mowState) {
       case Mow_C_Pressing:
-        terminalButtonsState = C;
+        terminalButtonsState |= C;
         mowStateCounter--;
         if (mowStateCounter == 0) {
           DBG("Pressing factory");
@@ -152,7 +152,7 @@ void calculateButtonsState()
         }
         break;
       case Mow_FactoryPressing:
-        terminalButtonsState = (C | Factory);
+        terminalButtonsState |= (C | Factory);
         mowStateCounter--;
         if (mowStateCounter == 0) {
           DBG("Releasing C");
