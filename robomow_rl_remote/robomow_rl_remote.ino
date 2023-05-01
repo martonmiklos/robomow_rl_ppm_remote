@@ -139,11 +139,13 @@ void calculateButtonsState()
       lastMowOn = true;
       mowState = Mow_C_Pressing;
       terminalButtonsState |= C;
+      terminalButtonsState &= Rabbit; // mowing not turned on on City 120 if the Rabbit button is pressed
       mowStateCounter = MOW_C_PRESS_TIME;
     } else {
       switch (mowState) {
       case Mow_C_Pressing:
         terminalButtonsState |= C;
+        terminalButtonsState &= Rabbit; // mowing not turned on on City 120 if the Rabbit button is pressed
         mowStateCounter--;
         if (mowStateCounter == 0) {
           DBG("Pressing factory");
