@@ -4,7 +4,7 @@
 
 Quick and dirty Arduino code to being able to control your Robomow RL series mower* with a PPM remote.
 
-*= Tested with Robomow City 120 however likely to work with RL-1000, RL-2000 RL-550, RL-850, etc. which has similar removable terminal with pigtail cable.
+*= Tested with Robomow City 120 ~~ however likely to work with RL-1000, RL-2000 RL-550, RL-850, etc. which has similar removable terminal with pigtail cable. ~~  RL-500 is known to be using a different protocol.
 
 [![In action on Youtube](https://img.youtube.com/vi/UquXWUTpAvM/0.jpg)](https://www.youtube.com/watch?v=UquXWUTpAvM)
 
